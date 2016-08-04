@@ -9,6 +9,18 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   
   <link rel="stylesheet" type="text/css" href="homestylesheet.css">
+  <script src="http://maps.googleapis.com/maps/api/js"></script>
+	<script>
+	function initialize() {
+	var mapProp = {
+	center:new google.maps.LatLng(30.6129, -96.3403),
+    zoom:12,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+	};
+	var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
   
   </head>
   <body>
@@ -53,5 +65,21 @@
     </ul>
   </div>
 </nav>  
+<div class= "container">
+	<div class="row">
+		<div class= "col-sm-4">
+		<h2> Statistics</h2 >
+		<p> Disclaimer: These statistics may not accurately represent the number of sexual violence incidences at TAMU, because 90% of rapes aren't reported.</p>
+		</div>
+		<div class= "col-sm-4">
+		<h2> Policies </h2>
+		<p>Policies would go here</p>
+		</div>
+		<div class= "col-sm-4">
+		<h2> Resources</h2>
+		<div id="googleMap" style="width:375px;height:268px;"></div>
+		</div>
+	</div>
+</div>
   </body>
 </html>
