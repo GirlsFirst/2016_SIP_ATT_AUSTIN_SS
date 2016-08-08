@@ -9,22 +9,9 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   
   <link rel="stylesheet" type="text/css" href="homestylesheet.css">
-  <script src="http://maps.googleapis.com/maps/api/js"></script>
-	<script>
-	function initialize() {
-	var mapProp = {
-	center:new google.maps.LatLng(30.6129, -96.3403),
-    zoom:12,
-    mapTypeId:google.maps.MapTypeId.ROADMAP
-	};
-	var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-}
-google.maps.event.addDomListener(window, 'load', initialize);
-</script>
-  
   </head>
   <body>
-  <h1>TAMU</h1>
+  <h1>Texas A&M University</h1>
   <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -69,15 +56,93 @@ google.maps.event.addDomListener(window, 'load', initialize);
 	<div class="row">
 		<div class= "col-sm-4">
 		<h2> Statistics</h2 >
-		<p> Disclaimer: These statistics may not accurately represent the number of sexual violence incidences at TAMU, because 90% of rapes aren't reported.</p>
+		<p> Disclaimer: These statistics may not accurately represent the number of sexual violence incidences at UT Austin, because 90% of rapes aren't reported.</p>
+		<p> TAMU PD 2014 Reports: 6 reported rapes, 2 reported sexual assaults</p>
+		<p> TAMU PD 2013 Reports: 5 reported rapes, 4 reported sexual assaults</p>
+		<p> TAMU PD 2012: 6 reported forcible sex offenses</p>
+		<a href="https://upd.tamu.edu/Current%20Disclosures/Annual%20Security%20Report.pdf">Published Reports</a>
 		</div>
 		<div class= "col-sm-4">
 		<h2> Policies </h2>
-		<p>Policies would go here</p>
-		</div>
+		<p>“Texas A&M University strives to maintain a work and educational environment free from discrimination, sexual harassment, and related retaliation in accordance with applicable federal and state laws. Individuals are encouraged to report all unwelcome conduct of a sexual nature.” The University encourages victims to seek immediate medical attention, consider long-term psychological treatment, and to explore taking legal and disciplinary action against their attacker.<a href=”http://studentlife.tamu.edu/sites/studentlife.tamu.edu/files/Resources-Rights-Options%20for%20Survivors%20-%209-28-15.pdf”> Learn more.</a>
+		</div> 
 		<div class= "col-sm-4">
 		<h2> Resources</h2>
 		<div id="googleMap" style="width:375px;height:268px;"></div>
+		<script> 
+		function initMap (){
+			var Place1= {lat: 30.605548, lng: -96.359093}; // TAMU PD
+			var Place2={lat: 30.581282, lng: -96.289711}; // College Station Medical Center
+			var Place3= {lat: 30.582315, lng: -96.279247}; // Baylor, Scott, and White Medical Center
+			
+			var map = new google.maps.Map(document.getElementById('googleMap'), {
+				zoom:10,
+				center:Place1
+			});
+			
+			var marker= new google.maps.Marker({
+				position:Place1,
+				map:map,
+				title:'TAMU PD'
+			});
+			var marker_1= new google.maps.Marker({
+				position:Place2,
+				map:map,
+				title:'College Station Medical Center'
+			});
+			
+			var marker_2 =new google.maps.Marker({
+				position:Place3,
+				map:map,
+				title:'Baylor, Scott, and White Medical Center'
+			});
+			
+			var Place1='<div id="TAASA">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">TAMU Police Department</h1>'+
+            '<div id="bodyContent">'+
+            '<p> 1111 Research Pkwy, College Station, TX 77845' +
+            '(979) 845-2345'+
+            '</p>'
+            '</div>';
+			var infowindow= new google.maps.InfoWindow ({
+			content:Place1
+			});
+			marker.addListener('click',function(){
+			infowindow.open(map,marker);
+			});
+			var Place2='<div id="clinic">'+
+            '</div>'+
+            '<h2 id="firstHeading2" class="firstHeading2">College Station Medical Center</h2>'+
+            '<div id="bodyContent2">'+
+            '<p> 1604 Rock Prairie Rd, College Station, TX 77845' +
+            '(979) 764-5100'+
+            '</p>'+
+            '</div>';
+			var infowindow2= new google.maps.InfoWindow({
+			content:Place2});
+			marker_1.addListener('click', function(){
+			infowindow2.open(map,marker_1);
+			});
+			var Place3='<div id="UTPD">'+
+            '</div>'+
+            '<h3 id="firstHeading3" class="firstHeading3">Baylor Scott and White Medical Center</h3>'+
+            '<div id="bodyContent3">'+
+            '<p>700 Scott and White Dr, College Station, TX 77845' +
+            '(979) 207-0100'+
+			'</p>'+
+            '</div>';
+			var infowindow3= new google.maps.InfoWindow({
+			content:Place3});
+			marker_2.addListener('click',function(){
+			infowindow3.open(map,marker_2);
+			});
+			}
+			
+	</script>
+	<script async defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2e9b8VOPnrGkLje2KHJbOEZfEhpLLx5Q&callback=initMap">
+	</script>
 		</div>
 	</div>
 </div>

@@ -11,7 +11,7 @@
   <link rel="stylesheet" type="text/css" href="homestylesheet.css">
   </head>
   <body>
-  <h1>Southern Methodist University</h1>
+  <h1>Baylor University</h1>
   <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -56,25 +56,28 @@
 	<div class="row">
 		<div class= "col-sm-4">
 		<h2> Statistics</h2 >
-		<p> Disclaimer: These statistics may not accurately represent the number of sexual violence incidences at UT Austin, because 90% of rapes aren't reported.</p>
-		<p> SMU PD 2014 Reports: 7 forcible sex offenses </p>
-		<p> SMU PD 2013 Reports: 5 forcible sex offenses </p>
-		<p> SMU PD 2012 Reports: 5 forcible sex offenses </p>
-		<a href="http://police.utexas.edu/reports/statistics/crimestats2015.pdf">Published Reports</a>
+		<p> Disclaimer: These statistics may not accurately represent the number of sexual violence incidences at Baylor University, because 90% of rapes aren't reported.</p>
+		<p> Baylor PD 2014 Reports:</p>
+		<p> 5 sexual offenses (4 rapes, 1 sexual assault)</p>
+		<p> Baylor PD 2013 Reports:</p>
+		<p> 6 sexual offenses (4 rapes, 2 sexual assaults)</p>
+		<p>Baylor PD 2012 Reports:</p>
+		<p> 2 sexual offenses </p>
+		<a href= "http://www.baylor.edu/dps/doc.php/252701.pdf">Published Reports</a>
 		</div>
 		<div class= "col-sm-4">
 		<h2> Policies </h2>
-		<p>Southern Methodist University’s Title IX Harassment Policy prohibits all sexual misconduct, including “sexual harassment, gender-based harassment, sexual violence, sexual assault, dating violence, domestic violence, stalking and sexual exploitation.” According to University policy, “a sexual interaction is considered consensual when individuals willingly and knowingly engage in the interaction.” Consent is ongoing and can be withdrawn at any time. Consent to previous sexual acts does not imply consent to present or future sexual acts. The University encourages survivors to seek medical attention immediately after attack, regardless of if they want to pursue legal action against their attacker. They also assist survivors by providing confidential counseling, no contact orders, and accommodations for transportation and housing. <a href=”https://sites.smu.edu/dea/LiveResponsibly/SexualMisconductTaskForce/SMU-policy-and-federal-and-state-law.asp”>Learn more.</a>
+		<p>According to the University, “consensual sexual activity happens when each partner willingly and affirmatively chooses to participate.” A person incapacitated (by drugs, alcohol, or otherwise rendered mentally or physically helpless) is unable to consent. Baylor University prohibits all forms of sex discrimination, sexual violence (including all non-consensual sexual contact), and sexual harassment (including relationship violence, stalking, sexual exploitation, and retaliation). University employees who are allowed to information confidential are licensed professional mental health counselors, licensed medical professionals, and the Baylor University Chaplain. The University recommends that the survivor files a complaint with the Title IX Coordinator. <a href=”http://www.baylor.edu/titleIX/doc.php/249242.docx”>Learn more.</a>
 		</div> 
 		<div class= "col-sm-4">
 		<h2> Resources</h2>
 		<div id="googleMap" style="width:375px;height:268px;"></div>
 		<script> 
 		function initMap (){
-			var Place1= {lat: 32.843556, lng: -96.782344}; // SMU PD
-			var Place2={lat: 32.843584, lng: -96.783253}; // SMU Women and LGBT Center
-			var Place3={lat: 32.812431, lng: -96.835405}; // Dallas Area Rape Crisis
-			var Place4={lat: 32.840123, lng: -96.786501}; // Student Counseling Service
+			var Place1= {lat: 31.489189, lng: -97.157259}; //BSWHMC
+			var Place2={lat:31.514432, lng: -97.199399}; // Providence Health Center
+			var Place3={lat: 31.543349, lng: -97.151344}; // Waco Advocacy Center
+			var Place4= {lat: 31.546497, lng: -97.113916}; // University Counseling Center 
 			var map = new google.maps.Map(document.getElementById('googleMap'), {
 				zoom:10,
 				center:Place1
@@ -83,30 +86,30 @@
 			var marker= new google.maps.Marker({
 				position:Place1,
 				map:map,
-				title:'SMU Police Department'
+				title:'Baylor, Scott and White Hillcrest Medical Center'
 			});
 			var marker_1= new google.maps.Marker({
 				position:Place2,
 				map:map,
-				title:'SMU Women and LGBT Center'
+				title:'Providence Health Center'
 			});
 			
 			var marker_2 =new google.maps.Marker({
 				position:Place3,
 				map:map,
-				title:'Dallas Area Rape Crisis'
+				title:'Waco Advocacy Center'
 			})
 			var marker_3= new google.maps.Marker({
 				position:Place4,
 				map:map,
-				title:'Student Counseling Service'
+				title:'University Counseling Center'
 			});
 			var Place1='<div id="TAASA">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Dallas Area Rape Crisis Center</h1>'+
+            '<h1 id="firstHeading" class="firstHeading">Baylor, Scott and White Hillcrest Medical Center</h1>'+
             '<div id="bodyContent">'+
-            '<p>4811 Harry Hines Blvd, Dallas, TX 75235' +
-            '(214) 345-5096'+
+            '<p>100 Hillcrest Medical Blvd, Waco, TX 76712' +
+            '(254) 202-2000'+
             '</p>'
             '</div>';
 			var infowindow= new google.maps.InfoWindow ({
@@ -117,10 +120,10 @@
 			});
 			var Place2='<div id="clinic">'+
             '</div>'+
-            '<h2 id="firstHeading2" class="firstHeading2">SMU Police Department</h2>'+
+            '<h2 id="firstHeading2" class="firstHeading2">Providence Health Center</h2>'+
             '<div id="bodyContent2">'+
-            '<p> 3128 Dyer St, Dallas, TX 75205' +
-            '(214) 768-3388 (non-emergency); (214) 768-3333 (emergency)'+
+            '<p> 6901 Medical Pkwy, Waco, TX 76712' +
+            '(542) 751 - 4000'+
             '</p>'+
             '</div>';
 			var infowindow2= new google.maps.InfoWindow({
@@ -130,10 +133,10 @@
 			});
 			var Place3='<div id="UTPD">'+
             '</div>'+
-            '<h3 id="firstHeading3" class="firstHeading3">Student Counseling Service</h3>'+
+            '<h3 id="firstHeading3" class="firstHeading3">Waco Advocacy Center</h3>'+
             '<div id="bodyContent3">'+
-            '<p>6004 Hillcrest Ave, Dallas, Texas 75205' +
-            '(214) 768-2277'+
+            '<p>2323 Columbus Ave, Waco, TX 76701' +
+            '(254) 752 - 9330 '+
 			'</p>'+
             '</div>';
 			var infowindow3= new google.maps.InfoWindow({
@@ -143,10 +146,10 @@
 			});
 			var Place4='<div id="school">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">SMU Women and LGBT Center</h1>'+
+            '<h1 id="firstHeading" class="firstHeading">University Counseling Center</h1>'+
             '<div id="bodyContent">'+
-            '<p>3140 Dyer Street, Suite 313, Dallas, TX 75205' +
-            '(214)768-4792'+'</p>'
+            '<p>209 Speight Ave, Waco, TX 76706' +
+            '(254) 710 - 2467'+'</p>'
             '</div>';
 			var infowindow4= new google.maps.InfoWindow ({
 			content:Place4
