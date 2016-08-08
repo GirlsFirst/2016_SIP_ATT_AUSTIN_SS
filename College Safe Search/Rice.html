@@ -7,12 +7,53 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  
   <link rel="stylesheet" type="text/css" href="homestylesheet.css">
-  
-  </head>
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+  <script>
+	function initMap() {
+		var firstLoc = {lat: 29.713781, lng: -95.406884}; // Rice PD
+		var secondLoc = {lat: 29.718257, lng: -95.403361}; // Rice Counseling Center
+		var thirdLoc = {lat: 29.756947, lng: -95.398623}; // Houston Area Women's Center
+						
+		var map = new google.maps.Map(document.getElementById('map'), {
+			zoom: 4,
+			center: firstLoc
+		});
+		var firstMarker = new google.maps.Marker({
+			position: firstLoc,
+			map: map,
+			title: 'Rice PD'
+		});
+		
+		var secondMarker = new google.maps.Marker({
+			position: secondLoc,
+			map: map,
+			title: 'Beaumont, TX'
+		});
+		
+		var thirdMarker = new google.maps.Marker({
+			position: thirdLoc,
+			map: map,
+			title: 'Salida, CO'
+		});
+						
+		var ricePDContent = "<p>Rice University Police Department.<br>Phone:<br>(713)348-6000 (Emergency)</p>" 
+		var ricePDWindow = new google.maps.InfoWindow({
+			content: ricePDContent,
+			//maxWidth: 50px
+		});
+	  
+		firstMarker.addListener('click', function() {
+			ricePDWindow.open(map, firstMarker);
+		});
+	}
+	</script>
+	<script async defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwKxagekk6UQmnGF5Vcl_3h7GlYbXy4tY&callback=initMap">
+	</script>
+	</head>
   <body>
-  <h1>Rice</h1>
+  <h1>Rice University</h1>
   <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -53,5 +94,17 @@
     </ul>
   </div>
 </nav>  
+<div class="container">
+	<div class="row">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4">Rice University defines consent as “an active, ongoing, and voluntary agreement by each participant to engage in sexual activity or sexual contact, communicated by clear actions or words.” Consent cannot be granted when the person is incapacitated (under the influence of drugs or alcohol or unconscious), being threatened or coerced, or if the person is being silent. Consent is ongoing and can be withdrawn at any time. Consent to previous sexual acts does not imply consent to present or future sexual acts. The Rice Code of Student Conduct and Title IX prohibits sexual assault, sexual misconduct (including unwanted sexual contact and sexual harassment), and relationship violence (including stalking and intimidation). The University encourages survivors to talk to either a Confidential Employee (a licensed professional who can keep information detailing the incident confidential) or a Responsible Employee (who will assist the survivor with any immediate needs and contact relevant offices). <a href=”http://safe.rice.edu/”>Learn more.</a></div>
+		<div class="col-sm-4">
+			<div id="map">
+				<h2>Resources</h2>
+				<div id="googleMap" style="width:375px;height:268px;"></div>
+			</div>
+		</div>
+	</div>
+</div>
   </body>
 </html>
