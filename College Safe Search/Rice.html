@@ -7,51 +7,9 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  
   <link rel="stylesheet" type="text/css" href="homestylesheet.css">
-    <script src="http://maps.googleapis.com/maps/api/js"></script>
-  <script>
-	function initMap() {
-		var firstLoc = {lat: 29.713781, lng: -95.406884}; // Rice PD
-		var secondLoc = {lat: 29.718257, lng: -95.403361}; // Rice Counseling Center
-		var thirdLoc = {lat: 29.756947, lng: -95.398623}; // Houston Area Women's Center
-						
-		var map = new google.maps.Map(document.getElementById('map'), {
-			zoom: 4,
-			center: firstLoc
-		});
-		var firstMarker = new google.maps.Marker({
-			position: firstLoc,
-			map: map,
-			title: 'Rice PD'
-		});
-		
-		var secondMarker = new google.maps.Marker({
-			position: secondLoc,
-			map: map,
-			title: 'Beaumont, TX'
-		});
-		
-		var thirdMarker = new google.maps.Marker({
-			position: thirdLoc,
-			map: map,
-			title: 'Salida, CO'
-		});
-						
-		var ricePDContent = "<p>Rice University Police Department.<br>Phone:<br>(713)348-6000 (Emergency)</p>" 
-		var ricePDWindow = new google.maps.InfoWindow({
-			content: ricePDContent,
-			//maxWidth: 50px
-		});
-	  
-		firstMarker.addListener('click', function() {
-			ricePDWindow.open(map, firstMarker);
-		});
-	}
-	</script>
-	<script async defer
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwKxagekk6UQmnGF5Vcl_3h7GlYbXy4tY&callback=initMap">
-	</script>
-	</head>
+  </head>
   <body>
   <h1>Rice University</h1>
   <nav class="navbar navbar-inverse">
@@ -94,15 +52,105 @@
     </ul>
   </div>
 </nav>  
-<div class="container">
+<div class= "container">
 	<div class="row">
-		<div class="col-sm-4"></div>
-		<div class="col-sm-4">Rice University defines consent as “an active, ongoing, and voluntary agreement by each participant to engage in sexual activity or sexual contact, communicated by clear actions or words.” Consent cannot be granted when the person is incapacitated (under the influence of drugs or alcohol or unconscious), being threatened or coerced, or if the person is being silent. Consent is ongoing and can be withdrawn at any time. Consent to previous sexual acts does not imply consent to present or future sexual acts. The Rice Code of Student Conduct and Title IX prohibits sexual assault, sexual misconduct (including unwanted sexual contact and sexual harassment), and relationship violence (including stalking and intimidation). The University encourages survivors to talk to either a Confidential Employee (a licensed professional who can keep information detailing the incident confidential) or a Responsible Employee (who will assist the survivor with any immediate needs and contact relevant offices). <a href=”http://safe.rice.edu/”>Learn more.</a></div>
-		<div class="col-sm-4">
-			<div id="map">
-				<h2>Resources</h2>
-				<div id="googleMap" style="width:375px;height:268px;"></div>
-			</div>
+		<div class= "col-sm-4">
+		<h2> Statistics</h2 >
+		<p> Disclaimer: These statistics may not accurately represent the number of sexual violence incidences at UT Austin, because 90% of rapes aren't reported.</p>
+		<p> Rice PD 2012 Reports: 2 reported forcible sex offenses</p>
+		<p> Rice PD 2013 Reports: 2 reported forcible sex offenses, 2 reported cases of domestic violence</p>
+		<p> Rice PD 2014 Reports: 14 reported forcible sex offenses, 2 reported cases of dating violence, 6 reported cases of domestic violence</p> 
+		<a href="http://www.rice.edu/safety/Safety-Bulletin-2015.pdf#page=19">Published Reports</a>
+		</div>
+		<div class= "col-sm-4">
+		<h2> Policies </h2>
+		<p>Scope: UT Policies apply to all students, employees,visitors, and applicants. If the
+		 incident occurs on campus, at an official UT function or student organization event, or occurs in a location with connection to UT,UT will conduct on investigation. </p>
+		 <p> Investigation: Once the report was filed the University will respond promptly and open an investigation. The investigation will include interviewing the parties and witnesses to gather and asses evidence.</p>
+		 <p> Definition of Consent: Consent is voluntary, mutually understandable agreement that clearly indicates a willingness to engage in each instance of sexual activity. Consent  can not be a result of physical force, threat, coercion, incapacitation, or any other factor that would make a person incapable of exercise their free will to choose. </p> 
+		<p> Definition of Incapacitation: A state of being that prevents a person for being able to give consent; drugs or alcohol, unconsciousness or being asleep, or because of another disability could make someone incapacitated.</p>
+		<p> Support: The student can go to the Office of the Dean of Students, Student Emergency Services for information about assistancd with class, living arrangements, or University-provided support or referalls needed as a result of the allegation.</p>
+		<p> If the University failed to apply with any issue layed out in this policies contacy the University Title IX Coordinator titleix@austin.utexas.edu </p>
+		<a href="http://catalog.utexas.edu/general-information/appendices/appendix-d/"> Learn more:</a> This link gives further information about UT policies on sex discrimination, sexual harassment, sexual assault, sexual misconduct, interpersonal violence, and stalking.
+		</div> 
+		<div class= "col-sm-4">
+		<h2> Resources</h2>
+		<div id="googleMap" style="width:375px;height:268px;"></div>
+		<script> 
+		function initMap (){
+			var Place1 = {lat: 29.713781, lng: -95.406884}; // Rice PD
+			var Place2 = {lat: 29.718257, lng: -95.403361}; // Rice Counseling Center
+			var Place3 = {lat: 29.756947, lng: -95.398623}; // Houston Area Women's Center
+			
+			var map = new google.maps.Map(document.getElementById('googleMap'), {
+				zoom:10,
+				center:Place1
+			});
+			
+			var marker= new google.maps.Marker({
+				position:Place1,
+				map:map,
+				title:'Rice PD'
+			});
+			var marker_1= new google.maps.Marker({
+				position:Place2,
+				map:map,
+				title:'Rice Counseling Center'
+			});
+			
+			var marker_2 =new google.maps.Marker({
+				position:Place3,
+				map:map,
+				title:'Houston Area Womens Center'
+			})
+			
+			var Place1='<div id="TAASA">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Rice Police Department</h1>'+
+            '<div id="bodyContent">'+
+            '<p> 6100 Main MS-551, Houston, TX 77005' +
+            '(713) 348-6000'+
+            '</p>'
+            '</div>';
+			var infowindow= new google.maps.InfoWindow ({
+			content:Place1
+			});
+			marker.addListener('click',function(){
+			infowindow.open(map,marker);
+			});
+			var Place2='<div id="clinic">'+
+            '</div>'+
+            '<h2 id="firstHeading2" class="firstHeading2">Rice Counseling Center</h2>'+
+            '<div id="bodyContent2">'+
+            '<p> 6100 Main St, Houston, TX 77005' +
+            '(713) 348-3311'+
+            '</p>'+
+            '</div>';
+			var infowindow2= new google.maps.InfoWindow({
+			content:Place2});
+			marker_1.addListener('click', function(){
+			infowindow2.open(map,marker_1);
+			});
+			var Place3='<div id="UTPD">'+
+            '</div>'+
+            '<h3 id="firstHeading3" class="firstHeading3">Houston Area Womens Center</h3>'+
+            '<div id="bodyContent3">'+
+            '<p>1010 Waugh Dr, Houston, TX 77019' +
+            ' (713) 528-2121'+
+			'</p>'+
+            '</div>';
+			var infowindow3= new google.maps.InfoWindow({
+			content:Place3});
+			marker_2.addListener('click',function(){
+			infowindow3.open(map,marker_2);
+			});
+			}
+
+			
+	</script>
+	<script async defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2e9b8VOPnrGkLje2KHJbOEZfEhpLLx5Q&callback=initMap">
+	</script>
 		</div>
 	</div>
 </div>
