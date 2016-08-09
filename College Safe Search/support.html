@@ -7,51 +7,80 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  
   <link rel="stylesheet" type="text/css" href="homestylesheet.css">
+  <link href='https://fonts.googleapis.com/css?family=Noto+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
   
   </head>
   <body>
-  <h1>Support</h1>
-  <nav class="navbar navbar-inverse">
+  <h1 class="page-title">Support</h1>
+<nav class="navbar navbar-default navbar-fixed-top navbar-custom">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">College Safe Search</a>
-    </div>
+      <a class="navbar-brand" href="home.html">College Safe Search</a>
+    </div> 
     <ul class="nav navbar-nav">
       <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">University of Texas System
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Public Universities
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="file:///C:/Users/GWC16/Desktop/GWC/College%20Safe%20Search/UT_Austin.html">UT Austin</a></li>
-          <li><a href="file:///C:/Users/GWC16/Desktop/GWC/College%20Safe%20Search/UT_Dallas.html">UT Dallas </a></li>
-          <li><a href="file:///C:/Users/GWC16/Desktop/GWC/College%20Safe%20Search/UT_Arlington.html">UT Arlington</a></li>
-		  <li><a href="file:///C:/Users/GWC16/Desktop/GWC/College%20Safe%20Search/UT_San_Antonio.html">UT San Antonio</a></li>
+          <li><a href="UT_Austin.html">UT Austin</a></li>
+          <li><a href="UT_Dallas.html">UT Dallas </a></li>
+		  <li><a href="UT_San_Antonio.html">UT San Antonio</a></li>
+		  <li><a href="UT_Arlington.html">UT Arlington</a></li>
+		  <li><a href="TAMU.html">Texas A&M</a></li>
+		  <li><a href="TAMU_CC.html">Texas A&M CC</a><li>
         </ul>
       </li>
 	   <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Public University
-        <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="file:///C:/Users/GWC16/Desktop/GWC/College%20Safe%20Search/TAMU.html">TAMU</a></li>
-          <li><a href="file:///C:/Users/GWC16/Desktop/GWC/College%20Safe%20Search/TAMU_CC.html">TAMU-CC</a></li> 
-		  <li><a href="file:///C:/Users/GWC16/Desktop/GWC/College%20Safe%20Search/UH.html"> UH</a></li>
-        </ul>
-      </li>
-	   <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Private University
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Private Universities
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="#"></a></li>
-          <li><a href="file:///C:/Users/GWC16/Desktop/GWC/Baylor.html">Baylor</a></li>
-          <li><a href="file:///C:/Users/GWC16/Desktop/GWC/College%20Safe%20Search/Rice.html">Rice</a></li> 
-		  <li><a href="file:///C:/Users/GWC16/Desktop/GWC/College%20Safe%20Search/SMU.html"> SMU</a></li>
+          <li><a href="Baylor.html">Baylor</a></li>
+          <li><a href="Rice.html">Rice</a></li> 
+		  <li><a href="SMU.html"> SMU</a></li>
         </ul>
       </li>
-      <li><a href="file:///C:/Users/GWC16/Desktop/GWC/College%20Safe%20Search/resource.html">Resource</a></li> 
-      <li><a href="file:///C:/Users/GWC16/Desktop/GWC/College%20Safe%20Search/support.html">Support</a></li> 
+      <li><a href="resource.html">Resource</a></li> 
+      <li><a href="support.html">Support</a></li> 
     </ul>
   </div>
-</nav>  
+</nav>
+<div class="support-contents">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6">
+			<h2>Submit Information</h2>
+				<form class="submit-info">
+					<p class="mover">First name:</p>
+					<input type="text" name="firstname" required><br>
+					<p class="mover">Last name:</p>
+					<input type="text" name="lastname" required><br>
+					<p class="mover">Email address:</p>
+					<input type="text" name="email" required><br>
+					<p class="mover">School:</p>
+					<input type="text" name="school" required><br>
+					<p class="mover">Link to statistics:</p>
+					<input type="text" name="statistics" required><br>
+					<p class="mover">Link to policies:</p>
+					<input type="text" name="policies" required><br>
+					<p class="mover">Comments:</p>
+					<input type="text" name="comments" required><br>
+					<input type="submit" value="Submit">
+				</form>
+			</div>
+			<div class="col-sm-6">
+				<h2>Legislation</h2>
+				<p>Recent bills concerning campus sexual assault include:</p>
+				<ul class="campus-bills">
+					<li>Campus Sexual Violence Elimination (SaVE) Act. <a href="http://clerycenter.org/campus-sexual-violence-elimination-save-act">Learn more.</a></li>
+					<li>Safe Campus Act of 2015. <a href="https://www.thefire.org/safe-campus-act-of-2015-as-filed/">Learn more.</a></li>
+					<li>Fair Campus Act. <a href="https://www.thefire.org/congress-introduces-second-campus-due-process-bill-the-fair-campus-act/">Learn more.</a></li>
+					<li>Campus Accountability and Safety Act. <a href="https://www.congress.gov/bill/114th-congress/senate-bill/590">Learn more.</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div> 
   </body>
 </html>
